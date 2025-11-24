@@ -21,8 +21,7 @@ CREATE TABLE retail_sales
 select * from retail_sales;
 
 
-ALTER TABLE retail_sales
-RENAME COLUMN retail_sales to sales;
+ALTER TABLE retail_sales to sales;
 
 ALTER TABLE retail_sales
 RENAME COLUMN transaction_id to id;
