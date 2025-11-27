@@ -31,16 +31,16 @@ SELECT  * FROM sales;
 -- checking for duplicates
 
 select * ,
-dense_rank() over(partition by id) as Duplicates
+Row_number() over(partition by id) as Duplicates
 from sales;
 
 select* from
 (
 select * ,
-dense_rank() over(partition by id) as Duplicates
+Row_number() over(partition by id) as Duplicates
 from sales
 ) t
-where duplicates >1;
+where Duplicates >1;
 
 -- no duplicates found
 
